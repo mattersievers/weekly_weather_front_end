@@ -3,7 +3,6 @@ import DayWeather from "./components/DayWeather";
 import { getWeather } from "./utils/API";
 import './App.css';
 
-
 function App() {
   const [daily, setDaily] = useState();
   
