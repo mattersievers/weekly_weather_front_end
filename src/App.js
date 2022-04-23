@@ -4,19 +4,19 @@ import { getWeather } from "./utils/API";
 import './App.css';
 
 function App() {
-  const [daily, setDaily] = useState();
+  const [weatherData, setWeatherData] = useState();
   
   useEffect( () => {
     getWeather()
     .then(response =>
       response.json()
-      .then(daily =>
-        setDaily(daily)
+      .then((data) =>
+        setWeatherData(data)
       )
     );
   }, [])
 
-  if(!daily){
+  if(!weatherData){
     return (
       <div>Loading...</div>
     )
@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
     <DayWeather
-    daily = {daily}
+    weatherData = {weatherData}
     />
     </div>
   );
