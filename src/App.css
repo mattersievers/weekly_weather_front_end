@@ -1,4 +1,26 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+.weatherContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.weatherDayContainer0{
+  background-color: lightgray;
+}
+.dayContainer{
+  margin: 1vw;
+  padding: 1vw;
+}
+
+.minTemp{
+  color: rgb(100, 100, 100);
+}

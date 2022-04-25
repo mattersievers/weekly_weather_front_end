@@ -5,6 +5,7 @@ import './App.css';
 
 function App() {
   const [weatherData, setWeatherData] = useState();
+  const dayNumbers = [0,1,2,3,4];
   
   useEffect( () => {
     getWeather()
@@ -23,9 +24,18 @@ function App() {
   }
   return (
     <div className="App">
-    <DayWeather
-    weatherData = {weatherData}
-    />
+      <div className="weatherContainer">
+        {dayNumbers.map((dayNumber,i) => {
+          return(
+            <div className={`weatherDayContainer${i}`}>
+              <DayWeather
+              weatherData = {weatherData}
+              dayNumber = {dayNumber}
+              /> 
+            </div>   
+          )
+        })}
+      </div>    
     </div>
   );
 }
