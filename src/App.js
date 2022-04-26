@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DayWeather from "./components/DayWeather";
+import DayWeather from "./components/DayWeather/index.js";
 import { getWeather } from "./utils/API";
 import './App.css';
 

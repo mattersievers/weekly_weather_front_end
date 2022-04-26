@@ -16,10 +16,10 @@ function DayWeather(props){
     }
 
     return (
-        <div class="dayContainer">
-            <div className="day">{dayOfWeek(daily[dayNumber])}</div>
-            <img src={`http://openweathermap.org/img/wn/${daily[dayNumber].weather[0].icon}@2x.png`} alt={daily[dayNumber].weather[0].description}/>
-            <div className="maxTemp">{parseInt(daily[dayNumber].temp.max)} °  <span className="minTemp">{parseInt(daily[dayNumber].temp.min)} ° </span></div>
+        <div className="dayContainer">
+            <div className="day" data-testid="dayOfWeek">{dayOfWeek(daily[dayNumber])}</div>
+            <img data-testid="weatherImage" src={`http://openweathermap.org/img/wn/${daily[dayNumber].weather[0].icon}@2x.png`} alt={daily[dayNumber].weather[0].description}/>
+            <div className="maxTemp" data-testid="maxTemp">{parseInt(daily[dayNumber].temp.max)}°  <span className="minTemp" data-testid="minTemp">{parseInt(daily[dayNumber].temp.min)}° </span></div>
         </div>
     )
 }

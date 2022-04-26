@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Day Weather component matches snapshot DOM node structure 1`] = `
+<DocumentFragment>
+  <div
+    class="dayContainer"
+  >
+    <div
+      class="day"
+      data-testid="dayOfWeek"
+    >
+      Fri
+    </div>
+    <img
+      alt="overcast clouds"
+      data-testid="weatherImage"
+      src="http://openweathermap.org/img/wn/04d@2x.png"
+    />
+    <div
+      class="maxTemp"
+      data-testid="maxTemp"
+    >
+      85°  
+      <span
+        class="minTemp"
+        data-testid="minTemp"
+      >
+        68° 
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
